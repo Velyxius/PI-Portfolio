@@ -1,8 +1,8 @@
 {
   "name": "pi-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Portfolio - Marcelo",
+  "main": "index.jsx",
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build"

@@ -1,0 +1,48 @@
+.container{
+  display: flex;
+  width: 35%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.info{  
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border-bottom: 0.75rem solid #ff3333;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 1rem rgba(45, 45, 45, 0.1);
+}
+
+
+.name{
+  color: red;
+  margin: 0 auto;
+}
+
+.biography{
+  color: blueviolet;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+  }
+  .card {
+    max-width: 100%; 
+  }
+
+  .name {
+    font-size: 2rem; 
+  }
+
+  .biography {
+    font-size: 1.2rem; 
+  }
+}
