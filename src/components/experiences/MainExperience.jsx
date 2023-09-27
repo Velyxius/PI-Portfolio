@@ -6,7 +6,7 @@ import {
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
-const Experience = () => {
+const MainExperience = () => {
   const sphereRef = useRef();
   const coneRef = useRef();
   const torusRef = useRef();
@@ -46,4 +46,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default MainExperience;

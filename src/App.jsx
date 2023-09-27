@@ -1,19 +1,18 @@
-import Experience from "./Experience";
-import Info from "./Info/Info";
-import { Canvas } from "@react-three/fiber";
+import Main from "./pages/main/Main";
+import Shapes from "./pages/shapes/Shapes";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
-  const cameraSettings = {
-    position: [0, 0, 5],
-    fov: 60,
-  };
-
   return (
     <>
-      <Info name={"Marcelo"} biography={"Developer. 21 years old."} />
-      <Canvas camera={cameraSettings}>
-        <Experience />
-      </Canvas>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Main />} />
+          <Route path="shapes">
+            <Route index element={<Shapes />} />
+          </Route>
+        </Route>
+      </Routes>
     </>
   );
 };
