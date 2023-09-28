@@ -1,47 +1,23 @@
-import {
-  OrbitControls,
-  FirstPersonControls,
-  PointerLockControls,
-} from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import Calli from "../../world/Calli";
+import Sakura from "../../world/Sakura";
+import Lantern from "../../world/Lantern";
+import Floor from "../../world/Floor";
 
 const MainExperience = () => {
-  const sphereRef = useRef();
-  const coneRef = useRef();
-  const torusRef = useRef();
-  useFrame((state, delta) => {
-    torusRef.current.position.y = Math.sin(state.clock.getElapsedTime());
-    torusRef.current.rotation.y = Math.cos(state.clock.getElapsedTime());
-    sphereRef.current.position.x = Math.sin(state.clock.getElapsedTime());
-    sphereRef.current.position.y = Math.cos(state.clock.getElapsedTime());
-    sphereRef.current.rotation.y = Math.cos(state.clock.getElapsedTime());
-    coneRef.current.position.x = Math.cos(state.clock.getElapsedTime()) + 5;
-    coneRef.current.rotation.z = Math.cos(state.clock.getElapsedTime()) + 5;
-  });
+  useFrame((state, delta) => {});
 
   return (
     <>
       <OrbitControls />
       <ambientLight intensity={0.3} />
       <directionalLight position={[2, 3, 5]} intensity={2} />
-      <mesh ref={sphereRef} position={[5, 0, -5]}>
-        <sphereGeometry args={[1, 16, 32]} />
-        <meshPhysicalMaterial color="red" roughness={0} reflectivity={0} />
-      </mesh>
-      <mesh ref={coneRef} position={[0, 0, -5]}>
-        <coneGeometry args={[1, 2]} />
-        <meshPhysicalMaterial color="pink" roughness={0} reflectivity={0} />
-      </mesh>
-      <mesh ref={torusRef} position={[-5, 0, -10]}>
-        <torusGeometry args={[1, 0.5, 16, 100]} />
-        <meshPhysicalMaterial
-          wireframe
-          color="green"
-          roughness={0}
-          reflectivity={0}
-        />
-      </mesh>
+      <Calli position-y={-1} />
+      <Sakura scale={0.15} position={[-2, -1, -5]} />
+      <Lantern scale={1.8} position={[2.5, -1, 0]} />
+      <Floor position-y={-1.1} rotation-x={-Math.PI / 2} receiveShadow />
     </>
   );
 };

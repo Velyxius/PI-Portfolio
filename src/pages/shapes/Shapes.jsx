@@ -1,7 +1,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import Info from "../../components/info/Info";
-import Experience from "../../Experience";
+import ShapesExperience from "../../components/experiences/ShapesExperience";
 
 const Figures = () => {
   const cameraSettings = {
@@ -11,9 +11,9 @@ const Figures = () => {
 
   return (
     <>
-      <Info name={"Marcelo"} biography={"Developer. 21 years old."} />
+      <Info name={"Marcelo García"} biography={"Developer. 21 years old."} />
       <Canvas camera={cameraSettings}>
-        <Experience />
+        <ShapesExperience />
       </Canvas>
     </>
   );

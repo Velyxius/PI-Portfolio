@@ -10,7 +10,7 @@ const Main = () => {
 
   return (
     <>
-      <Info name={"Marcelo"} biography={"Developer. 21 years old."} />
+      <Info name={"Marcelo García"} biography={"Developer. 21 years old."} />
       <Canvas camera={cameraSettings}>
         <MainExperience />
       </Canvas>
