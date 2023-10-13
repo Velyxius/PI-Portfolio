@@ -11,13 +11,9 @@ const Lantern = (props) => {
   const { nodes, materials } = useGLTF("/assets/models/lantern/lantern.glb");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.003}>
+      <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group
-            position={[0, 589.825, 0]}
-            rotation={[-Math.PI / 2, 0, 0]}
-            scale={100}
-          >
+          <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh
               castShadow
               receiveShadow

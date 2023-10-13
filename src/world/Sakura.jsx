@@ -11,7 +11,7 @@ import { useGLTF } from "@react-three/drei";
 const Sakura = (props) => {
   const { nodes, materials } = useGLTF("/assets/models/sakura/sakuras.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} castShadow receiveShadow>
       <group position={[88.121, 0, 0]} rotation={[Math.PI / 2, 0, -1.26]}>
         <mesh
           castShadow

@@ -29,15 +29,10 @@ const Calli = (props) => {
           <group
             name="170e3b08faee40458e5af78f85b78b53fbx"
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.01}
           >
             <group name="Object_2">
               <group name="RootNode">
-                <group
-                  name="callirig"
-                  rotation={[-Math.PI / 2, 0, 0]}
-                  scale={100}
-                >
+                <group name="callirig" rotation={[-Math.PI / 2, 0, 0]}>
                   <group name="Object_5">
                     <primitive object={nodes._rootJoint} />
                     <skinnedMesh
@@ -100,18 +95,10 @@ const Calli = (props) => {
                         nodes.Object_50.morphTargetInfluences
                       }
                     />
-                    <group
-                      name="Object_45"
-                      rotation={[-Math.PI / 2, 0, 0]}
-                      scale={100}
-                    />
+                    <group name="Object_45" rotation={[-Math.PI / 2, 0, 0]} />
                   </group>
                 </group>
-                <group
-                  name="calliMESH"
-                  rotation={[-Math.PI / 2, 0, 0]}
-                  scale={100}
-                />
+                <group name="calliMESH" rotation={[-Math.PI / 2, 0, 0]} />
               </group>
             </group>
           </group>

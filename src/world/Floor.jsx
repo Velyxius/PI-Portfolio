@@ -38,10 +38,11 @@ const Floor = (props) => {
       new Vector2(0.5, 0.5);
 
   return (
-    <mesh {...props}>
-      <planeGeometry args={[32, 32, 20, 20]} />
+    <mesh receiveShadow {...props}>
+      <planeGeometry args={[64, 64, 32, 32]} />
       <meshStandardMaterial {...propsTexture} />
     </mesh>
   );
 };
+
 export default Floor;

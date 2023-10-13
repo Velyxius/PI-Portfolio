@@ -4,14 +4,14 @@ import MainExperience from "../../components/experiences/MainExperience";
 
 const Main = () => {
   const cameraSettings = {
-    position: [0, 0, 5],
-    fov: 60,
+    position: [0, 4, 7],
+    fov: 75,
   };
 
   return (
     <>
-      <Info name={"Marcelo García"} biography={"Developer. 21 years old."} />
-      <Canvas camera={cameraSettings}>
+      <Info name={"Marcelo Millán"} biography={"Developer. 21 years old."} />
+      <Canvas camera={cameraSettings} shadows>
         <MainExperience />
       </Canvas>
     </>
