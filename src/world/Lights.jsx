@@ -9,16 +9,16 @@ import {
 
 const Lights = () => {
   const directionalLightRef = useRef();
-  useHelper(directionalLightRef, DirectionalLightHelper);
+  // useHelper(directionalLightRef, DirectionalLightHelper);
 
   const pointLightRef = useRef();
-  useHelper(pointLightRef, PointLightHelper);
+  // useHelper(pointLightRef, PointLightHelper);
 
   const spotLightRef = useRef();
-  useHelper(spotLightRef, SpotLightHelper);
+  // useHelper(spotLightRef, SpotLightHelper);
 
   const hemisphereLightRef = useRef();
-  useHelper(hemisphereLightRef, HemisphereLightHelper);
+  // useHelper(hemisphereLightRef, HemisphereLightHelper);
 
   return (
     <>
