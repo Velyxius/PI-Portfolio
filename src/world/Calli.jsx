@@ -7,6 +7,7 @@ Title: Smol Calli - Mori Calliope, HoloMyth
 
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { AnimationUtils } from "three";
 
 const Calli = (props) => {
   const calliRef = useRef();
@@ -17,7 +18,12 @@ const Calli = (props) => {
   console.log(calliRef);
 
   useEffect((state, delta) => {
-    const action = actions[/*"SmolcalliAnimationsRESOURCE"*/ "paradewalk"];
+    const clip = actions["SmolcalliAnimationsRESOURCE"].getClip();
+    const dance_clip = AnimationUtils.subclip(clip, "Dance", 300, 350, 60);
+    const jump_clip = AnimationUtils.subclip(clip, "Dance", 400, 450, 60);
+    const shy_clip = AnimationUtils.subclip(clip, "Shy", 500, 570, 60);
+    const spin_clip = AnimationUtils.subclip(clip, "Spin", 619, 704, 60);
+    const action = mixer.clipAction(dance_clip);
     action.play();
     //mixer.setTime(3.5);
   }, []);
