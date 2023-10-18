@@ -1,12 +1,13 @@
 .container{
   display: flex;
-  width: 35%;
+  width: fit-content;
   height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   z-index: 1;
+  margin-left: 6rem;
 }
 
 .info{  
@@ -16,6 +17,7 @@
   text-align: center;
   background: white;
   box-shadow: 0 0 1rem rgba(45, 45, 45, 0.1);
+  user-select: none;
 }
 
 

@@ -11,6 +11,7 @@ import Dinner from "../../world/Dinner";
 import Environments from "../../world/Environments";
 import { Perf } from "r3f-perf";
 import SignPost from "../../world/SignPost";
+import WelcomeText from "../../world/WelcomeText";
 
 const MainExperience = () => {
   useFrame((state, delta) => {});
@@ -24,6 +25,7 @@ const MainExperience = () => {
       <Sakura scale={0.15} position={[-2, 0, -5]} />
       <Lantern scale={1} position={[3, 6, 0]} />
       <SignPost position={[-3, 0, 0]} />
+      <WelcomeText />
       <Torii scale={2} position={[0, 8.46, 10]} />
       <Dinner position={[0, 0.02, 1.5]} />
       <Floor position-y={-0.1} rotation-x={-Math.PI / 2} receiveShadow />

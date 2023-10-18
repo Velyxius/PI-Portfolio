@@ -3,6 +3,20 @@ import { useGLTF } from "@react-three/drei";
 
 const SignPost = (props) => {
   const { nodes, materials } = useGLTF("/assets/models/signpost/SignPost.glb");
+  const handleAboutMeSign = (event, type) => {
+    alert(type);
+  };
+
+  const handleProjectsSign = (event, type) => {
+    if (window.confirm(type)) {
+      window.open("https://github.com/Velyxius?tab=repositories", "_blank");
+    }
+  };
+
+  const handleContactSign = (event, type) => {
+    alert(type);
+  };
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -20,6 +34,13 @@ const SignPost = (props) => {
         position={[0.937, 3.7, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.64, 1, 0.7]}
+        onClick={(event) =>
+          handleAboutMeSign(
+            event,
+            "Hola, soy Marcelo Millán, Ingeniero de Sistemas en Formación.\n\n" +
+              "Habilidades en Python, Django, HTML, CSS y JavaScript."
+          )
+        }
       >
         <mesh
           castShadow
@@ -57,6 +78,9 @@ const SignPost = (props) => {
         position={[-0.83, 3.4, -0.46]}
         rotation={[Math.PI / 2, 0, -2.618]}
         scale={[0.64, 1, 0.7]}
+        onClick={(event, type) =>
+          handleProjectsSign(event, 'Clickea "Ok" para ver los proyectos')
+        }
       >
         <mesh
           castShadow
@@ -76,6 +100,12 @@ const SignPost = (props) => {
         position={[-0.121, 0.999, 0.237]}
         rotation={[Math.PI / 2, 0, Math.PI / 6]}
         scale={[0.64, 1, 0.91]}
+        onClick={(event) =>
+          handleContactSign(
+            event,
+            "Puedes contactarme por medio del siguiente correo: garcia.marcelo@correounivalle.edu.co"
+          )
+        }
       >
         <mesh
           castShadow
